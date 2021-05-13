@@ -1,4 +1,4 @@
-<h1 align = "center">🌟 LilyGo-EPD47-HC08-PDM_MIC-Test 🌟</h1>
+<h1 align = "center">🌟 LilyGo-EPD47-HC08-MIC-Test 🌟</h1>
 
 ## **中文 | [English](./README.md)** 
 
