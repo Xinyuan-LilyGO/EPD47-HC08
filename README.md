@@ -28,7 +28,7 @@
   
   
   
-## HC08 AT Setting
+## HC08 AT Set
 ### 1.HC08 connects USB to TTL serial port module  
   
 +-----------------------+   
