@@ -62,10 +62,10 @@ AT+NAME = INK_047  //蓝牙名称改为 INK_047
 "sleep began, wait for wake up"  
   
   
--  当程序开始时，LilyGo-EPD47水墨屏会自动进入休眠模式，这时整体电流将降到**1mA**或者更低
+-  当程序开始时，LilyGo-EPD47水墨屏会自动进入休眠模式，这时整体电流将降到 **1mA** 或者更低
 ![EPD47_Sleep](/images/10.jpg)
-
-
+  
+  
 ### 2、EPS32蓝牙按键唤醒  
  -  使用 ArduinoIED 打开  \examples\epd47_blue_waker_center\epd47_blue_waker_center.ino  
    
@@ -100,5 +100,5 @@ https://github.com/Cai1902126141/LilyGo-EPD47/blob/main/DemoVideo.mp4?raw=true
 ## 八、补充说明
 **1、HC-08模块任何拔插操作务必先断电！**  
 **2、HC-08模组必须设置为一级节能模式，否则程序无法休眠，请确保AT指令设置成功**  
- 
+  
   

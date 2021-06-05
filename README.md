@@ -4,11 +4,11 @@
   
 ## Introduction
 ### 1.This is a Dome about testing the HC08-PDM_MIC low energy Bluetooth module. 
-   -  Install the HC08-PDM_MIC module on a LilyGo-EPD47 screen and put it to sleep  
+   -  Install the HC08-PDM_MIC module on a LilyGo-EPD47 ink screen.  
      
-   -  Use another piece of ESP32 to wake up the sleeping LilyGo-EPD47 at any time, send the character text that needs to be displayed, and make it enter the microphone for detection  
+   -  The Bluetooth low energy module HC-08 is in the serial port transparent transmission mode, so that the ESP32 in the LilyGo-EPD47 ink screen that does not need to work temporarily enters the sleep mode, so that the loss of the battery is minimized.  
      
-   -  When the sound is detected, it will go to sleep again. Press the defined button to repeat the above test steps.  
+   -  There is also a PDM microphone attached to the HC08-PDM_MIC module, which can be used for voice development, and DOME will test whether it is working properly.  
   
   
 ## Hardware preparation
@@ -72,39 +72,32 @@
 "sleep began, wait for wake up"  
   
   
-  
+ -  When the program starts, the LilyGo-EPD47 ink screen will automatically enter the sleep mode, then the overall current will drop to **1mA** or lower  
+ ![EPD47_Sleep](/images/10.jpg) 
   
 ### 2. EPS32 Development board firmware  
  -  Open with ArduinoIED  \examples\epd47_blue_waker_center\epd47_blue_waker_center.ino  
   
  -  **Please confirm your button pin before compiling**，The button pin is 15  
   
- -  After selecting the correct port, you can compile and upload. After the upload is successful, wait for about 10 seconds,Until the screen splash screen displays the following text  
+ -  At this time, ESP32 sends a specific wake-up character to HC-08 through the Bluetooth serial port, so that the ESP32 in LilyGo-EPD47 can return to normal working state, and can choose to enter sleep again after completing its work normally 
   
-![EPD47show2](/images/5.jpg) 
+![EPD47show2](/images/11.jpg) 
 "Please blow into the microphone"  
   
   
   
   
-## Test steps
+## Test the PDM_MIC
 ### 1. When the screen displays：“请对麦克风吹气”,Please blow into the microphone
   
 ![PDM_MIC](/images/6.jpg) 
-  
-  
-  
+    
+
 ### 2.When the microphone detects air pressure, ESP32 enters the sleep state, waiting to be activated again  
   
-![EPD47show3](/images/7.jpg) 
+![EPD47show3](/images/12.jpg) 
 "microphone test normally, sleep began"  
-  
-  
-  
-### 3.If you want to repeat the test again, you can press the button, wait for the ink screen (about 5 seconds) to flash and display the text, then repeat the test steps  
-  
-![ButtonPress](/images/8.jpg) 
-  
   
   
   
@@ -117,11 +110,6 @@ https://github.com/Cai1902126141/LilyGo-EPD47/blob/main/DemoVideo.mp4?raw=true
   
  - ***The HC-08 module must be set to the first-level energy-saving mode, otherwise the program cannot sleep, please ensure that the AT command is set successfully***  
   
- - Before testing, please make sure that the HC-08 microphone module and EPD47 are connected securely  
-  
- - If the screen does not respond after pressing the button, try to press the button vigorously for a longer time to ensure that the button is triggered  
-  
- - After pressing the button to wake up the screen, you must first complete the microphone test steps, otherwise it will wait for the microphone input and will not sleep  
   
   
 
