@@ -66,7 +66,7 @@
    
  -  **Please select the development board"TTGO T-Watch"**(Otherwise, the compilation will fail because the project occupies too much storage)  
    
- -  After selecting the correct port, you can compile and upload. After the upload is successful, wait for a while until the screen displays the following text, which means success  
+ -  Connect PC to LilyGo-EPD47, after selecting the correct port, you can compile and upload. After the upload is successful, wait for a while until the screen displays the following text, which means success  
   
 ![EPD47show1](/images/4.jpg)  
 "sleep began, wait for wake up"  
@@ -79,6 +79,10 @@
  -  Open with ArduinoIED  \examples\epd47_blue_waker_center\epd47_blue_waker_center.ino  
   
  -  **Please confirm your button pin before compiling**，The button pin is 15  
+   
+ -  Connect the PC to another piece of ESP32 to compile and upload. After the upload is successful, open the serial port to observe, press the button you set, and the following screen will appear after a while
+   
+![ESP32_Serial](/images/13.jpg)  
   
  -  At this time, ESP32 sends a specific wake-up character to HC-08 through the Bluetooth serial port, so that the ESP32 in LilyGo-EPD47 can return to normal working state, and can choose to enter sleep again after completing its work normally 
   
