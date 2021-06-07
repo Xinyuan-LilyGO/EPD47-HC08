@@ -93,12 +93,14 @@
   
   
 ## Test the PDM_MIC
-### 1. When the screen displays：“请对麦克风吹气”,Please blow into the microphone
+ -  This test program will test whether the microphone is working properly after ESP32 wakes up  
+  
+ -  When the screen displays：“请对麦克风吹气”,Please blow into the microphone
   
 ![PDM_MIC](/images/6.jpg) 
     
 
-### 2.When the microphone detects air pressure, ESP32 enters the sleep state, waiting to be activated again  
+ -  When the microphone detects air pressure, ESP32 enters the sleep state, waiting to be activated again  
   
 ![EPD47show3](/images/12.jpg) 
 "microphone test normally, sleep began"  
