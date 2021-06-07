@@ -55,7 +55,9 @@
   
 ## Hardware installation
  - Install the HC08-PDM_MIC module on LilyGo-EPD47  
+   
 **(Warning: The power must be turned off, otherwise the ESP32 module of the screen may be burned out , At your own risk)**  
+  
 ![HC08install](/images/2.jpg) 
   
   

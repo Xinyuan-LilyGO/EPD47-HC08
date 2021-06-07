@@ -46,8 +46,10 @@ AT+NAME = INK_047  //蓝牙名称改为 INK_047
   
   
 ## 四、硬件安装
-1、在 LilyGo-EPD47 上安装 HC08-PDM_MIC 模组  
+1、在 LilyGo-EPD47 上安装 HC08-PDM_MIC 模组 
+   
 **（注意：必须断电操作，否则将有可能烧坏水墨屏ESP32模组，后果自负！！**  )
+  
 ![HC08install](/images/2.jpg)
 
   
